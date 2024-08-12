@@ -70,6 +70,7 @@ mod tests {
     fn at_least_five_types_of_fruits() {
         let mut basket = get_fruit_basket();
         fruit_basket(&mut basket);
+        println!("{:?}", basket.len());
         let count_fruit_kinds = basket.len();
         assert!(count_fruit_kinds >= 5);
     }
@@ -78,7 +79,9 @@ mod tests {
     fn greater_than_eleven_fruits() {
         let mut basket = get_fruit_basket();
         fruit_basket(&mut basket);
+        println!("{:?}", basket);
         let count = basket.values().sum::<u32>();
+        println!("{:?}", count);
         assert!(count > 11);
     }
 
