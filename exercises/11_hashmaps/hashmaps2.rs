@@ -20,13 +20,7 @@ enum Fruit {
 }
 
 fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
-    let fruit_kinds = [
-        Fruit::Apple,
-        Fruit::Banana,
-        Fruit::Mango,
-        Fruit::Lychee,
-        Fruit::Pineapple,
-    ];
+    let fruit_kinds = [Fruit::Apple, Fruit::Banana, Fruit::Mango, Fruit::Lychee, Fruit::Pineapple];
 
     for fruit in fruit_kinds {
         // TODO: Insert new fruits if they are not already present in the
@@ -39,7 +33,6 @@ fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
         //     continue;
         // }
         // basket.insert(fruit, 1);
-        
     }
 }
 
@@ -53,7 +46,11 @@ mod tests {
 
     // Don't modify this function!
     fn get_fruit_basket() -> HashMap<Fruit, u32> {
-        let content = [(Fruit::Apple, 4), (Fruit::Mango, 2), (Fruit::Lychee, 5)];
+        let content = [
+            (Fruit::Apple, 4),
+            (Fruit::Mango, 2),
+            (Fruit::Lychee, 5),
+        ];
         HashMap::from_iter(content)
     }
 
