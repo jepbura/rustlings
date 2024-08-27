@@ -10,6 +10,19 @@ fn factorial(num: u64) -> u64 {
     // - additional variables
     // For an extra challenge, don't use:
     // - recursion
+
+    (1..num + 1).fold(1, |acc, x| {
+        print!("acc is: {} * x is: {} = ", acc, x);
+        acc * x
+    })
+
+    // let mut result = 1;
+
+    // for x in 2..=num {
+    //     result *= x;
+    // }
+
+    // result
 }
 
 fn main() {
